@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Animation</title>
+</head>
+<style>
+    .container {
+        position: relative;
+        background-color: blueviolet;
+        height: 70vh;
+        width: 100vw;
+    }
+
+    .box {
+        background-color: rgb(203, 147, 255);
+        height: 100px;
+        width: 100px;
+        position: absolute;
+        left: 0px;
+        bottom: 0px;
+        border-radius: 60px;
+        animation: animateX 3s linear infinite, animateY 1s ease-out  infinite alternate;
+    }
+
+    @keyframes animateX {
+        from{
+           left: 0%;
+        }
+        to{
+            left: 100%;
+        }
+    }
+    @keyframes animateY {
+        from{
+            bottom: 0%;
+        }
+        to{
+            bottom: 100%;
+        }   
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="box"></div>
+    </div>
+
+</body>
+
+</html>
